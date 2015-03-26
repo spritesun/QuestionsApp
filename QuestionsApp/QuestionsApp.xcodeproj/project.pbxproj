@@ -15,6 +15,7 @@
 		A3678F731AC282C8008AD7F7 /* QuestionsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3678F721AC282C8008AD7F7 /* QuestionsAppTests.swift */; };
 		A3A0A7551AC28BEE00B168BD /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A0A7541AC28BEE00B168BD /* QuestionsViewController.swift */; };
 		A3A0A7571AC2908100B168BD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A0A7561AC2908100B168BD /* Question.swift */; };
+		A3A0A7671AC3922500B168BD /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A0A7661AC3922500B168BD /* AlarmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		A3678F721AC282C8008AD7F7 /* QuestionsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsAppTests.swift; sourceTree = "<group>"; };
 		A3A0A7541AC28BEE00B168BD /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		A3A0A7561AC2908100B168BD /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		A3A0A7661AC3922500B168BD /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				A3A0A7541AC28BEE00B168BD /* QuestionsViewController.swift */,
 				A3A0A7561AC2908100B168BD /* Question.swift */,
 				A3678F601AC282C8008AD7F7 /* Main.storyboard */,
+				A3A0A7661AC3922500B168BD /* AlarmViewController.swift */,
 				A3678F631AC282C8008AD7F7 /* Images.xcassets */,
 				A3678F651AC282C8008AD7F7 /* LaunchScreen.xib */,
 				A3678F5A1AC282C8008AD7F7 /* Supporting Files */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3A0A7671AC3922500B168BD /* AlarmViewController.swift in Sources */,
 				A3678F5F1AC282C8008AD7F7 /* ViewController.swift in Sources */,
 				A3A0A7571AC2908100B168BD /* Question.swift in Sources */,
 				A3678F5D1AC282C8008AD7F7 /* AppDelegate.swift in Sources */,

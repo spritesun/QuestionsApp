@@ -60,10 +60,11 @@ class QuestionsViewController: UITableViewController, UIPickerViewDataSource, UI
         return ""
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {        
         if let indexPath = tableView.indexPathForSelectedRow() {
             let selectedCell = tableView.cellForRowAtIndexPath(indexPath)
             selectedCell?.detailTextLabel?.text = self.pickerView(pickerView, titleForRow: row, forComponent: component)
         }
     }
+    
 }

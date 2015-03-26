@@ -19,7 +19,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVW-7S-Kyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6" y="381"/>
+            <point key="canvasLocation" x="-200" y="434"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -65,6 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="500" y="434"/>
         </scene>
         <!--Questions View Controller-->
         <scene sceneID="bBQ-Wg-Isa">
@@ -116,6 +117,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="pgf-EO-d9b" kind="show" id="EXM-AR-GoD"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="fEz-vk-kJG" detailTextLabel="joG-lJ-lcT" style="IBUITableViewCellStyleValue1" id="bFv-b0-as9">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -188,7 +192,94 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TK4-Fc-9md" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="283" y="1108"/>
+            <point key="canvasLocation" x="500" y="998"/>
+        </scene>
+        <!--Alarm View Controller-->
+        <scene sceneID="ICH-JO-dTa">
+            <objects>
+                <viewController id="pgf-EO-d9b" customClass="AlarmViewController" customModule="QuestionsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ad7-Xd-nhM"/>
+                        <viewControllerLayoutGuide type="bottom" id="dqg-qO-fZm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pOK-9n-Ug9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DQj-wD-gmA">
+                                <rect key="frame" x="0.0" y="20" width="600" height="176"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="176" id="Bfo-nv-b1U"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="alarmCell" textLabel="Joa-1w-1x6" detailTextLabel="Eot-Bv-Fs8" style="IBUITableViewCellStyleValue1" id="Ff6-2C-o3e">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ff6-2C-o3e" id="ajB-yP-c0Q">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Joa-1w-1x6">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Eot-Bv-Fs8">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="pgf-EO-d9b" id="ZCl-ad-w8a"/>
+                                    <outlet property="delegate" destination="pgf-EO-d9b" id="RIK-0I-NLb"/>
+                                </connections>
+                            </tableView>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMZ-SC-XmG">
+                                <rect key="frame" x="0.0" y="236" width="600" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="pgf-EO-d9b" id="b4B-JZ-dZn"/>
+                                    <outlet property="delegate" destination="pgf-EO-d9b" id="kmm-O1-ZTy"/>
+                                </connections>
+                            </pickerView>
+                            <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="NYa-8H-5Aw">
+                                <rect key="frame" x="0.0" y="236" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="449030637.20945698">
+                                    <!--2015-03-26 02:43:57 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="dateValueChanged:" destination="pgf-EO-d9b" eventType="valueChanged" id="iMf-mi-Utj"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DQj-wD-gmA" firstAttribute="top" secondItem="Ad7-Xd-nhM" secondAttribute="bottom" constant="20" id="0A8-hN-C1h"/>
+                            <constraint firstItem="NYa-8H-5Aw" firstAttribute="leading" secondItem="pOK-9n-Ug9" secondAttribute="leadingMargin" constant="-16" id="9Wo-Sh-nM3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NYa-8H-5Aw" secondAttribute="trailing" constant="-16" id="9yg-yb-Nlc"/>
+                            <constraint firstItem="DQj-wD-gmA" firstAttribute="leading" secondItem="pOK-9n-Ug9" secondAttribute="leadingMargin" constant="-16" id="C3c-hB-YO5"/>
+                            <constraint firstItem="UMZ-SC-XmG" firstAttribute="top" secondItem="NYa-8H-5Aw" secondAttribute="top" id="CUd-1j-cqd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DQj-wD-gmA" secondAttribute="trailing" constant="-16" id="dpw-b4-SCL"/>
+                            <constraint firstItem="NYa-8H-5Aw" firstAttribute="top" secondItem="DQj-wD-gmA" secondAttribute="bottom" constant="40" id="lG6-Rw-UKm"/>
+                            <constraint firstItem="UMZ-SC-XmG" firstAttribute="leading" secondItem="pOK-9n-Ug9" secondAttribute="leadingMargin" constant="-16" id="pID-zG-pTe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UMZ-SC-XmG" secondAttribute="trailing" constant="-16" id="wQr-aP-SkM"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="datePicker" destination="NYa-8H-5Aw" id="e0Q-oE-uCp"/>
+                        <outlet property="pickerView" destination="UMZ-SC-XmG" id="dii-Fa-Nwq"/>
+                        <outlet property="tableView" destination="DQj-wD-gmA" id="nUa-WN-qiM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxw-ar-Iqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1204" y="992"/>
         </scene>
     </scenes>
 </document>
