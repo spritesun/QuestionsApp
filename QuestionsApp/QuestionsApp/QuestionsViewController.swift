@@ -51,10 +51,18 @@ class QuestionsViewController: UITableViewController, UIPickerViewDataSource, UI
         }
         return nil
     }
+
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         if let question  = selectedQuestion() {
             return String(question.floor + row)
         }
         return ""
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if let indexPath = tableView.indexPathForSelectedRow() {
+            let selectedCell = tableView.cellForRowAtIndexPath(indexPath)
+            selectedCell?.detailTextLabel?.text = self.pickerView(pickerView, titleForRow: row, forComponent: component)
+        }
     }
 }
