@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1ou-AH-1TS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="lRo-cS-eYQ">
+            <objects>
+                <navigationController id="1ou-AH-1TS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qlL-Yj-4Hr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xr2-Bm-MH0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cVW-7S-Kyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6" y="381"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -18,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrE-qD-nqB">
-                                <rect key="frame" x="0.0" y="40" width="600" height="276"/>
+                                <rect key="frame" x="0.0" y="84" width="600" height="276"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="276" id="OV0-UR-YRd"/>
                                 </constraints>
@@ -27,19 +43,22 @@
                                 </connections>
                             </containerView>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9VK-5J-afb">
-                                <rect key="frame" x="0.0" y="359" width="600" height="162"/>
+                                <rect key="frame" x="0.0" y="400" width="600" height="162"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="rrE-qD-nqB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="YfI-kF-ZRO"/>
-                            <constraint firstItem="9VK-5J-afb" firstAttribute="top" secondItem="rrE-qD-nqB" secondAttribute="bottom" constant="43" id="fFE-Jc-CjQ"/>
+                            <constraint firstItem="9VK-5J-afb" firstAttribute="top" secondItem="rrE-qD-nqB" secondAttribute="bottom" constant="40" id="fFE-Jc-CjQ"/>
                             <constraint firstItem="rrE-qD-nqB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="k1D-cm-uQy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9VK-5J-afb" secondAttribute="trailing" constant="-16" id="lcT-nj-DWT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rrE-qD-nqB" secondAttribute="trailing" constant="-16" id="noe-QQ-chw"/>
                             <constraint firstItem="9VK-5J-afb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="wg5-mU-pDo"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="vtC-te-nbl">
+                        <barButtonItem key="rightBarButtonItem" title="Sync" id="aoy-sZ-f5F"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="pickerView" destination="9VK-5J-afb" id="s3h-Rk-Lb6"/>
                     </connections>

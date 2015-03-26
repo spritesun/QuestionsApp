@@ -15,6 +15,7 @@ class QuestionsViewController: UITableViewController, UIPickerViewDataSource, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         questions = [
             Question(floor: 3, ceiling: 5),
             nil,
